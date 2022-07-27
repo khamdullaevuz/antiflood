@@ -1,5 +1,5 @@
 {
-    "name": "khamdullaevuz/memcache",
+    "name": "khamdullaevuz/antiflood",
     "description": "Anti-flood system in php with memcache",
     "type": "library",
     "autoload": {

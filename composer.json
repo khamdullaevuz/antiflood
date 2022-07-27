@@ -8,7 +8,7 @@
         }
     },
     "require": {
-        "ext-memcache": "8.1-dev"
+        "ext-memcache": "*"
     },
     "license": "MIT",
     "authors": [

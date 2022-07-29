@@ -16,7 +16,7 @@ class AntiFlood
     {
         $tmp = new \stdClass();
         $tmp->value = $value;
-        $this->connection->set($key, $tmp, false, 10);
+        $this->connection->set($key, $tmp, false, 1);
     }
 
     private function getValue($key)

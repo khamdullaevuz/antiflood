@@ -18,10 +18,11 @@ use Khamdullaevuz\AntiFlood;
 
 $flood = new AntiFlood();
 
-if($flood->check(10, 200))
-    echo "Flood not detected";
-else
+if(!$flood->check(10, 200))
     echo "Flood detected";
+else
+    echo "Flood not detected";
+
 ```
 
 Author: [Elbek Khamdullaev](https://khamdullaev.uz)

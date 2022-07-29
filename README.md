@@ -18,7 +18,7 @@ use Khamdullaevuz\AntiFlood;
 
 $flood = new AntiFlood();
 
-if($flood->check("10", "200"))
+if($flood->check(10, 200))
     echo "Flood not detected";
 else
     echo "Flood detected";

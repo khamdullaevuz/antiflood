@@ -5,7 +5,7 @@
 ## Require library
 
 ```shell
-composer require khamdullaev/antiflood
+composer require khamdullaevuz/antiflood
 ```
 
 ## Usage in code

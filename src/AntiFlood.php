@@ -5,18 +5,20 @@ namespace Khamdullaevuz;
 class AntiFlood
 {
     private $connection;
+    private $seconds;
 
-    function __construct()
+    function __construct(string $hostname = 'localhost', int $port = 11211, int $seconds = 1)
     {
         $this->connection = new \Memcache();
-        $this->connection->connect('localhost', 11211);
+        $this->connection->connect($hostname, $port);
+        $this->seconds = $seconds;
     }
 
     private function setValue($key, $value)
     {
         $tmp = new \stdClass();
         $tmp->value = $value;
-        $this->connection->set($key, $tmp, false, 1);
+        $this->connection->set($key, $tmp, false, $this->seconds);
     }
 
     private function getValue($key)
@@ -26,15 +28,14 @@ class AntiFlood
 
     public function check($key, $value)
     {
-        if(!is_object($this->getValue($key))) {
+        if (!is_object($this->getValue($key))) {
             $this->setValue($key, $value);
             return true;
         }
-        if($this->getValue($key)->value !== $value)
-        {
+        if ($this->getValue($key)->value !== $value) {
             $this->setValue($key, $value);
             return true;
-        }else {
+        } else {
             return false;
         }
     }

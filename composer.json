@@ -1,21 +1,22 @@
 {
-    "name": "khamdullaevuz/antiflood",
-    "description": "Anti-flood system in php with memcache",
-    "type": "library",
-    "autoload": {
-        "psr-4": {
-            "Khamdullaevuz\\": "src/"
-        }
-    },
-    "require": {
-        "ext-memcache": "*"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Elbek Khamdullaev",
-            "email": "elbek.khamdullaev@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev"
+  "name": "khamdullaevuz/antiflood",
+  "description": "Anti-flood system in php with memcache",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Khamdullaevuz\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.0",
+    "ext-memcache": "*"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Elbek Khamdullaev",
+      "email": "elbek.khamdullaev@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev"
 }

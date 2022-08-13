@@ -14,19 +14,19 @@ class AntiFlood
         $this->seconds = $seconds;
     }
 
-    private function setValue($key, $value)
+    private function setValue(mixed $key, mixed $value)
     {
         $tmp = new \stdClass();
         $tmp->value = $value;
         $this->connection->set($key, $tmp, false, $this->seconds);
     }
 
-    private function getValue($key)
+    private function getValue(mixed $key)
     {
         return $this->connection->get($key);
     }
 
-    public function check($key, $value)
+    public function check(mixed $key, mixed $value)
     {
         if (!is_object($this->getValue($key))) {
             $this->setValue($key, $value);
